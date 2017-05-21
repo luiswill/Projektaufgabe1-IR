@@ -10,26 +10,17 @@ import stem.ext.englishStemmer;
 
 public class Parser extends parserSrc.NYTCorpusDocumentParser
 {
-    /**
-     * Constructor for objects of class NYTCorpusDocumentParser
-     */
-    public static void main(String args[]){
-    	Parser parser1 = new Parser(); 
-    	parser1.parseAndStem();
 
-    }
-   
     /*
      * 
      * Return document
      */
-    private Document parseAndStem(){
+    public Document parseAndStem(File file){
     	
     	 englishStemmer stemmer = new englishStemmer();
 
-         File file1 = new File("C:/Users/Luis/Downloads/nyt/nyt/data/2000/01/01/1165029.xml");
          
-         NYTCorpusDocument doc = parseNYTCorpusDocumentFromFile(file1, false);
+         NYTCorpusDocument doc = parseNYTCorpusDocumentFromFile(file, false);
          
          String headline = doc.getHeadline(); //get headline
          String url = doc.getUrl().toString();
@@ -39,7 +30,7 @@ public class Parser extends parserSrc.NYTCorpusDocumentParser
          if (stemmer.stem()){ 
         	 content = stemmer.getCurrent();
          }
-        System.out.print(content); // to remove, just for seeing the result
+        System.out.println(content); // to remove, just for seeing the result
 
 		return new Document(1, headline, url, content.split(" ")); // create a new document with properties
     }
