@@ -1,11 +1,5 @@
 package src;
 
-/**
- * Write a description of class Document here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Document
 {
     private long id;
@@ -16,9 +10,9 @@ public class Document
     private static final String MSG_TITEL = "";
     private static final String MSG_URL = "";
     private static final String MSG_CONTENT = "";
-    /**
-     * Constructor for objects of class Document
-     */
+
+    
+    
     public Document(long id, String titel, String url, String[] content)
     {
        check(id > 0, MSG_WRONG_ID);

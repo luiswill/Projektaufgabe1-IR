@@ -11,10 +11,6 @@ import stem.ext.englishStemmer;
 public class Parser extends parserSrc.NYTCorpusDocumentParser
 {
 
-    /*
-     * 
-     * Return document
-     */
     public Document parseAndStem(File file){
     	
     	 englishStemmer stemmer = new englishStemmer();

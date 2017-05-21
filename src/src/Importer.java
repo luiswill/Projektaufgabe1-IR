@@ -2,22 +2,11 @@ package src;
 
 import java.io.File;
 
-/**
- * Write a description of class Importer here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Importer
 {
     File [] files;
     private static final float SIZE_CONSTANT = 1024;
-    /**
-     * Constructor for objects of class Importer
-     */
-    public Importer()
-    {
-    }
+
     
     public static void main(String[] args){
     	Importer importer = new Importer();
